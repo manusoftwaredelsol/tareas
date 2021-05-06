@@ -1,4 +1,5 @@
 <?php
+session_start();
 define('USER', 'tareas');
 define('PASSWORD', 'tareas');
 define('HOST', '192.168.12.10');

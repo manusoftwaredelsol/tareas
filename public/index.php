@@ -29,6 +29,10 @@ switch ($pagina) {
     case 'tareas':
         require '../src/pages/tareas/tareas.php';
         break;
+    
+    case 'logout':
+        require '../src/clear-session.php';
+        break;
 
     default:
         http_response_code(404);
