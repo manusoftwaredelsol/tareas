@@ -9,6 +9,11 @@ $pagina = $path[0] ?? '';
 
 ob_start();
 switch ($pagina) {
+
+    case '':
+        echo 'index';
+        break;
+
     case 'userpage':
         require '../src/pages/userpage/userpage.php';
         break;
