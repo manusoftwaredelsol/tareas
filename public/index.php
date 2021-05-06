@@ -26,6 +26,10 @@ switch ($pagina) {
         require '../src/pages/login/login.php';
         break;
 
+    case 'tareas':
+        require '../src/pages/tareas/tareas.php';
+        break;
+
     default:
         http_response_code(404);
         echo 'error 404';
