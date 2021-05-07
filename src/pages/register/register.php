@@ -1,4 +1,8 @@
-
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link rel="stylesheet" href="../../test.css">
+</head>
 
         <form method="post" action="" name="register">
     <div class="form-element">
@@ -63,9 +67,7 @@
     }
         ?>
         
-        <form action="../login/login.php">        
-            <button type="submit" name="login" value="login">Iniciar sesión</button>
-        </form>
+    <a href="/login"> Iniciar sesión </a>
 
 
 

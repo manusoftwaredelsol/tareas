@@ -35,6 +35,10 @@ switch ($pagina) {
         require '../src/pages/tareas/tareas.php';
         break;
     
+    case 'crearTarea':
+        require '../src/pages/tareas/crearTarea.php';
+        break;
+    
     case 'logout':
         require '../src/clear-session.php';
         break;
