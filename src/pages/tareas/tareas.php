@@ -9,7 +9,7 @@ table {
 }
 </style>
 
-<form action="../config.php" method="post" ></form>
+<form action="../../config.php" method="post" ></form>
 
 <h2>Tareas</h2>
 <div>
