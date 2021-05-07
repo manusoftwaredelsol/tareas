@@ -1,34 +1,15 @@
-<?php
-$servername = "192.168.12.10";
-$database = "tareas";
-$username = "tareas";
-$password = "tareas";
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $database);
-// Check connection
-if (!$conn) {
-    die("Fallo conexión: " . mysqli_connect_error());
-}
-echo "Conectado correctamente";
-mysqli_close($conn);
-?>
-
-<!DOCTYPE html>
-<html>
-<head>
 <style>
 table, td, th {
   border: 1px solid black;
 }
-
 table {
   width: 100%;
   border-collapse: collapse;
   text-align: center;
 }
 </style>
-</head>
-<body>
+
+<form action="../config.php" method="post" ></form>
 
 <h2>Tareas</h2>
 <div>
@@ -67,7 +48,5 @@ table {
     <td>ccc</td>
   </tr>
 </table>
-<br><br>
+<br/>
 <a href="/userpage"> Volver a la página de usuario </a>
-</body>
-</html>
