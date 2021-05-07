@@ -7,7 +7,7 @@ if (isset($_POST['crearTarea'])) {
         $descripcion = $_POST['descripcion'];      
         $id_user = $_SESSION['user']['user_id'];
 
-        $query = $connection->prepare("INSERT INTO tareas(estado,inicio,fin,descripción,id_user) VALUES (:estado,:inicio,:fin,:descripcion,:id_user)");
+        $query = $connection->prepare("INSERT INTO tareas(estado,inicio,fin,descripcion,id_user) VALUES (:estado,:inicio,:fin,:descripcion,:id_user)");
         $query->bindParam("estado", $estado, PDO::PARAM_STR);
         $query->bindParam("inicio", $inicio, PDO::PARAM_STR);
         $query->bindParam("fin", $fin, PDO::PARAM_STR);

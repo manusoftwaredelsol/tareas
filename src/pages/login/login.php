@@ -17,7 +17,7 @@ if (isset($_POST['login'])) {
     } else {
         if (password_verify($password, $result['password'])) {
             $_SESSION['user'] = array(
-                'user_id' => $result['id'],
+                'user_id' => $result['id_user'],
                 'username' => $result['username'],
                 'password' => $password
             );
