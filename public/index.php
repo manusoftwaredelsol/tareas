@@ -11,8 +11,13 @@ ob_start();
 switch ($pagina) {
 
     case '':
-        echo 'index';
-        break;
+        if(isset($_SESSION['user'])) {
+        header('Location:/tareas');
+        exit;
+        } else {
+        header('Location:/login');
+        exit;
+        }
 
     case 'userpage':
         require '../src/pages/userpage/userpage.php';

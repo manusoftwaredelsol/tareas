@@ -1,9 +1,5 @@
-<html>
-    <head>
-        <title>title</title>
-        <link rel="stylesheet" href="/test.css">
-    </head>
-    <body>
+
+
         <form method="post" action="" name="register">
     <div class="form-element">
         <label>Usuario</label>
@@ -70,9 +66,6 @@
         <form action="../login/login.php">        
             <button type="submit" name="login" value="login">Iniciar sesión</button>
         </form>
-    </body>
-</html>
-
 
 
 

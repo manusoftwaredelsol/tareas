@@ -67,5 +67,7 @@ table {
     <td>ccc</td>
   </tr>
 </table>
+<br><br>
+<a href="/userpage"> Volver a la página de usuario </a>
 </body>
 </html>
