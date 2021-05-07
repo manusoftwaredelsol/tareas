@@ -1,5 +1,26 @@
 <?php
+if (isset($_POST['registroTarea'])) {
+ 
+        $estado = $_POST['estado'];
+        $inicio = $_POST['inicio_tarea'] + $_POST['hora_inicio'];
+        $fin = $_POST['fin_tarea'] + $_POST['hora_fin'];
+        $descripcion = $_POST['descripcion'];      
+        $id_user = $_SESSION['user']['user_id'];
 
+        $query = $connection->prepare("INSERT INTO tareas(estado,inicio,fin,descripción,id_user) VALUES (:estado,:inicio,:fin,:descripcion,:id_user)");
+        $query->bindParam("estado", $estado, PDO::PARAM_STR);
+        $query->bindParam("inicio", $inicio, PDO::PARAM_STR);
+        $query->bindParam("fin", $fin, PDO::PARAM_STR);
+        $query->bindParam("descripcion", $descripcion, PDO::PARAM_STR);
+        $query->bindParam("id_user", $id_user, PDO::PARAM_STR);
+        $result = $query->execute();
+ 
+            if ($result) {
+                echo '<p class="success">Registro de tarea completado correctamente</p>';
+            } else {
+                echo '<p class="error">Algo no ha ido bien...</p>';
+            }
+}
 ?>
 
 <head>
@@ -10,9 +31,9 @@
 
 <h1>Ficha de tarea</h1>
 <div>
-    <form method="post" action="" name="register">
+    <form method="post" action="" name="registroTarea">
         <div class="form-element">
-        Estado  <select>
+            Estado  <select name="estado">
 		<option selected="selected">- Estados -</option>
 		<option>No iniciada</option>
                 <option>En curso</option>
@@ -32,7 +53,7 @@
         <div class="form-element">
             Descripcion
             <br>
-            <textarea id="descripcion" rows="5" cols="60"></textarea>
+            <textarea id="descripcion" name="descripcion" rows="5" cols="60"></textarea>
         </div>
         <input type="submit" value="Registrar tarea">
     </form>
