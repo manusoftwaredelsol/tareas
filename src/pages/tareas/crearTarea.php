@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST['registroTarea'])) {
+if (isset($_POST['crearTarea'])) {
  
         $estado = $_POST['estado'];
         $inicio = $_POST['inicio_tarea'] + $_POST['hora_inicio'];
@@ -55,7 +55,7 @@ if (isset($_POST['registroTarea'])) {
             <br>
             <textarea id="descripcion" name="descripcion" rows="5" cols="60"></textarea>
         </div>
-        <input type="submit" value="Registrar tarea">
+        <input type="submit" name="crearTarea" value="Registrar tarea">
     </form>
 </div>
 

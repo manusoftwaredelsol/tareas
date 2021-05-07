@@ -10,6 +10,7 @@
         <a href="/tareas">Revisar tareas</a>
         <br><br>
         Nombre de usuario: <?= $_SESSION['user']['username'] ?><br><br>
+        Id de usuario: <?= $_SESSION['user']['user_id'] ?><br><br>
         Contraseña: <?= $_SESSION['user']['password'] ?>
         <br><br>
         <a href="/logout">Cerrar sesión</a>   
