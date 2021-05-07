@@ -2,8 +2,8 @@
 if (isset($_POST['crearTarea'])) {
  
         $estado = $_POST['estado'];
-        $inicio = $_POST['inicio_tarea'] + $_POST['hora_inicio'];
-        $fin = $_POST['fin_tarea'] + $_POST['hora_fin'];
+        $inicio = $_POST['inicio_tarea'].' '.$_POST['hora_inicio'];
+        $fin = $_POST['fin_tarea'].' '.$_POST['hora_fin'];
         $descripcion = $_POST['descripcion'];      
         $id_user = $_SESSION['user']['user_id'];
 
