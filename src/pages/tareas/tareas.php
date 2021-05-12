@@ -1,3 +1,16 @@
+<?php
+if (isset($_POST['tareas'])) {
+
+        $query = $connection->prepare("SELECT * FROM tareas WHERE ESTADO=:estado,INICIO=:inicio,FIN=:fin,DESCRIPCION=:descripcion");
+        $query->bindParam("estado", $estado, PDO::PARAM_STR);
+        $query->bindParam("inicio", $inicio, PDO::PARAM_STR);
+        $query->bindParam("fin", $fin, PDO::PARAM_STR);
+        $query->bindParam("descripcion", $descripcion, PDO::PARAM_STR);
+       
+        $result = $query->execute();
+}
+?>
+
 <style>
 table, td, th {
   border: 1px solid black;
@@ -8,8 +21,6 @@ table {
   text-align: center;
 }
 </style>
-
-<form action="../../config.php" method="post" ></form>
 
 <h2>Tareas</h2>
 <div>
@@ -29,12 +40,14 @@ table {
     <th>Fin</th>
     <th>Descripción</th>
   </tr>
+  <?php while ($row = $result->fetch(PDO::FETCH_ASSOC)) { ?>
   <tr>
-    <td>aaa</td>
-    <td>aaa</td>
-    <td>aaa</td>
-    <td>aaa</td>
+    <td><?php echo $row["estado"];?></td>
+    <td><?php echo $row["inicio"];?></td>
+    <td><?php echo $row["fin"];?></td>
+    <td><?php echo $row["descripcion"];?></td>
   </tr>
+  <?php } ?>
   <tr>
     <td>bbb</td>
     <td>bbb</td>
