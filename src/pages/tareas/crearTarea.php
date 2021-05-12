@@ -23,11 +23,6 @@ if (isset($_POST['crearTarea'])) {
 }
 ?>
 
-<head>
-    <meta charset="UTF-8">
-    <title>title</title>
-    <link rel="stylesheet" href="../../test.css">
-</head>
 
 <h1>Ficha de tarea</h1>
 <div>

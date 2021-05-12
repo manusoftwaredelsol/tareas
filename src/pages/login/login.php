@@ -39,32 +39,35 @@ if (isset($_POST['login'])) {
 <head>
     <meta charset="UTF-8">
     <title>title</title>
-    <link rel="stylesheet" href="../../test.css">
+    
 </head>
 
 <body>
-
-    <h1> BIENVENIDO A TU PAGINA WEB </h1>
-    <h2> Introduce tu usuario y contraseña para hacer algo </h2>
+    
+    <div class="container">
+        <p class="p-1"> <h1> BIENVENIDO A TU PAGINA WEB </h1> </p>
+        <p class="p-2"><h2> Introduce tu usuario y contraseña para hacer algo </h2> </p>
+    </div>
     <form method="post">
-        <div class="form-element">
-            Usuario: <input type="text" name="username"> </br> </br>
+        <div class="container">
+            Usuario: <input type="text" class="form-control" name="username"> </br> </br>
         </div>
-        <div class="form-element">
-            Contraseña: <input type="password" name="password"> </br> </br>
+        <div class="container">
+            Contraseña: <input type="password" class="form-control" name="password"> </br> </br>
         </div>
-        <div class="form-element">
-            <button type="submit" name="login" value="login">Entrar</button>
+        <div class="container">
+            <button type="submit" class="btn btn-primary" name="login" value="login">Entrar</button>
         </div>
     </form>
 
-
-    <h2>Si no tienes una cuenta...<h2>
+    <div class="container">
+    <p class="p-2"><h2>Si no tienes una cuenta...<h2></p>
     <!-- <form action="../register/register.php">
         <button type="submit" name="registrarse" value="registrarse">Registrarse</button>
     </form> -->
     <!-- Con un enlace vale, a la ruta que definimos en el switch, no al .php -->
-    <a href="/register">Registrarse</a>
+    <a href="/register" class="btn btn-primary">Registrarse</a>
+    </div>
 </body>
 
 </html>

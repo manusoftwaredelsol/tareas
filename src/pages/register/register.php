@@ -1,25 +1,21 @@
-<head>
-    <meta charset="UTF-8">
-    <title>title</title>
-    <link rel="stylesheet" href="../../test.css">
-</head>
 
-        <form method="post" action="" name="register">
+
+<form method="post" action="" name="register">
     <div class="form-element">
         <label>Usuario</label>
-        <input type="text" name="username" required />
+        <input type="text" class="form-control" name="username" required />
     </div>
     <div class="form-element">
         <label>Email</label>
-        <input type="email" name="email" required />
+        <input type="email" class="form-control" name="email" required />
     </div>
     <div class="form-element">
         <label>Contraseña</label>
-        <input type="password" name="password" required />
+        <input type="password" class="form-control" name="password" required />
     </div>
     <div class="form-element">
         <label>Confirmar contraseña</label>
-        <input type="password" name="password-check" required />
+        <input type="password" class="form-control" name="password-check" required />
     </div>
     <button type="submit" name="register" value="register">Registrarse</button>
 </form>
@@ -67,7 +63,7 @@
     }
         ?>
         
-    <a href="/login"> Iniciar sesión </a>
+<a href="/login" class="btn-check"> Iniciar sesión </a>
 
 
 

@@ -55,7 +55,7 @@ $body = ob_get_clean();
     <head>
         <meta charset="UTF-8">
         <title>title</title>
-        <link rel="stylesheet" href="../../../public/test.css">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
     </head>
     <body>
         <?php echo $body ?>
