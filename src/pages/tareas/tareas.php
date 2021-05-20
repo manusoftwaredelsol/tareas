@@ -1,13 +1,15 @@
 <?php
-if (isset($_POST['tareas'])) {
+if (isset($_GET['tareas'])) {
 
-        $query = $connection->prepare("SELECT * FROM tareas WHERE ESTADO=:estado,INICIO=:inicio,FIN=:fin,DESCRIPCION=:descripcion");
+        $query = $connection->prepare("SELECT * FROM tareas WHERE id_tarea=1;");
         $query->bindParam("estado", $estado, PDO::PARAM_STR);
         $query->bindParam("inicio", $inicio, PDO::PARAM_STR);
         $query->bindParam("fin", $fin, PDO::PARAM_STR);
         $query->bindParam("descripcion", $descripcion, PDO::PARAM_STR);
+        $query->bindParam("id_user", $id_user, PDO::PARAM_STR);
        
-        $result = $query->execute();
+        $query->execute();
+        $result = $query->fetch(PDO::FETCH_ASSOC);
 }
 ?>
 
