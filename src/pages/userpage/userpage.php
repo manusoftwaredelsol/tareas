@@ -8,7 +8,7 @@
     <br>
     <div class="container">
     Nombre de usuario: <?= $_SESSION['user']['username'] ?><br><br>
-    Id de usuario: <?= $_SESSION['user']['user_id'] ?><br><br>
+    Id de usuario: <?= $_SESSION['user']['id_user'] ?><br><br>
     Contraseña: <?= $_SESSION['user']['password'] ?>
     <br><br> 
     </div>
