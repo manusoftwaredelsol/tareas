@@ -18,6 +18,9 @@ $query->execute();
         border-collapse: collapse;
         text-align: center;
     }
+    span {
+    float: right;
+    }
 </style>
 
 <h2>Tareas</h2>
@@ -29,6 +32,7 @@ $query->execute();
         <option>En curso</option>
         <option>Completada</option>
     </select>
+    <span><input type="button" onclick="location.href='http://localhost/crearTarea'" value='+'></span>
 </div>
 <br/>
 
@@ -39,7 +43,7 @@ $query->execute();
         <th>Fin</th>
         <th>Descripción</th>
     </tr>
-    <?php while ($row   = $query->fetch(PDO::FETCH_ASSOC)) { ?>
+    <?php while ($row = $query->fetch(PDO::FETCH_ASSOC)) { ?>
         <tr>
             <td><?php echo $row["estado"]; ?></td>
             <td><?php echo $row["inicio"]; ?></td>
