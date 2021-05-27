@@ -1,16 +1,6 @@
 <?php
-if (isset($_GET['tareas'])) {
-
-        $query = $connection->prepare("SELECT * FROM tareas WHERE id_tarea=1;");
-        $query->bindParam("estado", $estado, PDO::PARAM_STR);
-        $query->bindParam("inicio", $inicio, PDO::PARAM_STR);
-        $query->bindParam("fin", $fin, PDO::PARAM_STR);
-        $query->bindParam("descripcion", $descripcion, PDO::PARAM_STR);
-        $query->bindParam("id_user", $id_user, PDO::PARAM_STR);
-       
-        $query->execute();
-        $result = $query->fetch(PDO::FETCH_ASSOC);
-}
+        $query = $connection->prepare("SELECT * FROM tareas WHERE id_user = :id_user;");
+        $query->bindParam("id_user", $_SESSION['user']['id_user'], PDO::PARAM_INT);
 ?>
 
 <style>
@@ -35,6 +25,7 @@ table {
 	</select>
 </div>
 <br/>
+
 <table>
   <tr>
     <th>Estado</th>
@@ -42,7 +33,7 @@ table {
     <th>Fin</th>
     <th>Descripción</th>
   </tr>
-  <?php while ($row = $result->fetch(PDO::FETCH_ASSOC)) { ?>
+  <?php while ($row = $query->fetch(PDO::FETCH_ASSOC)) { ?>
   <tr>
     <td><?php echo $row["estado"];?></td>
     <td><?php echo $row["inicio"];?></td>
@@ -50,18 +41,7 @@ table {
     <td><?php echo $row["descripcion"];?></td>
   </tr>
   <?php } ?>
-  <tr>
-    <td>bbb</td>
-    <td>bbb</td>
-    <td>bbb</td>
-    <td>bbb</td>
-  </tr>
-  <tr>
-    <td>ccc</td>
-    <td>ccc</td>
-    <td>ccc</td>
-    <td>ccc</td>
-  </tr>
 </table>
+
 <br/>
 <a href="/userpage"> Volver a la página de usuario </a>
