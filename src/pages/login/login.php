@@ -43,31 +43,36 @@ if (isset($_POST['login'])) {
 </head>
 
 <body>
-    
-    <div class="container">
-        <p class="p-1"> <h1> BIENVENIDO A TU PAGINA WEB </h1> </p>
-        <p class="p-2"><h2> Introduce tu usuario y contraseña para hacer algo </h2> </p>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h3 class="card-title text-center">Bienvenido</h3>
+            <h5 class="card-title text-center">Introduce tus datos</h5>
+            <form method="post" action="#" class="form-signin">
+              <div class="form-label-group">    
+                <label for="username">Usuario</label>
+                <input type="text" name="username" class="form-control" placeholder="Usuario" required autofocus>
+                <br/>
+              </div>
+              <div class="form-label-group">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" class="form-control" placeholder="Contraseña" required>
+                <br/>
+              </div>
+                <button class="btn btn-primary text-center" type="submit" name="login" value="login">Sign in</button>
+            </form>
+               <div class="row">
+                <h5 class="card-title text-center">Si no tienes cuenta...</h5>
+                <a class="btn btn-primary text-center" href="/register">Registrate</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <form method="post">
-        <div class="container">
-            Usuario: <input type="text" class="form-control" name="username"> </br> </br>
-        </div>
-        <div class="container">
-            Contraseña: <input type="password" class="form-control" name="password"> </br> </br>
-        </div>
-        <div class="container">
-            <button type="submit" class="btn btn-primary" name="login" value="login">Entrar</button>
-        </div>
-    </form>
-
-    <div class="container">
-    <p class="p-2"><h2>Si no tienes una cuenta...<h2></p>
-    <!-- <form action="../register/register.php">
-        <button type="submit" name="registrarse" value="registrarse">Registrarse</button>
-    </form> -->
-    <!-- Con un enlace vale, a la ruta que definimos en el switch, no al .php -->
-    <a href="/register" class="btn btn-primary">Registrarse</a>
-    </div>
+  </div>
 </body>
 
 </html>
+

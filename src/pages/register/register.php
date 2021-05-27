@@ -1,24 +1,38 @@
 
-
-<form method="post" action="" name="register">
-    <div class="form-element">
-        <label>Usuario</label>
-        <input type="text" class="form-control" name="username" required />
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Introduce tus datos</h5>
+            <form method="post" action="" class="form-signin" name="register">
+              <div class="form-label-group">    
+                <label for="inputUser">Usuario</label>
+                <input type="text" name="username" class="form-control" placeholder="Usuario" required autofocus>
+                <br/>
+              </div>
+                <div class="form-label-group">    
+                <label for="inputEmail">E-mail</label>
+                <input type="text" name="email" class="form-control" placeholder="E-mail" required autofocus>
+                <br/>
+              </div>
+              <div class="form-label-group">
+                <label for="inputPassword">Contraseña</label>
+                <input type="password" name="password" class="form-control" placeholder="Contraseña" required>
+                <br/>
+              </div>
+              <div class="form-label-group">
+                <label for="inputConfirmPassword">Confirmar Contraseña</label>
+                <input type="password" name="password-check" class="form-control" placeholder="Confirmar Contraseña" required>
+                <br/>
+              </div>
+              <button class="btn btn-primary text-center" type="submit" value="register">Confirmar registro</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="form-element">
-        <label>Email</label>
-        <input type="email" class="form-control" name="email" required />
-    </div>
-    <div class="form-element">
-        <label>Contraseña</label>
-        <input type="password" class="form-control" name="password" required />
-    </div>
-    <div class="form-element">
-        <label>Confirmar contraseña</label>
-        <input type="password" class="form-control" name="password-check" required />
-    </div>
-    <button type="submit" name="register" value="register">Registrarse</button>
-</form>
+  </div>
         <?php
         
         
