@@ -24,34 +24,43 @@ if (isset($_POST['crearTarea'])) {
 ?>
 
 
-<h1>Ficha de tarea</h1>
-<div>
-    <form method="post" action="" name="registroTarea">
-        <div class="form-element">
-            Estado  <select name="estado">
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <h1>Ficha de tarea</h1>
+            <br/>
+            <form method="post" action="" name="registroTarea">
+            <div class="form-label-group">
+                Estado  <select name="estado">
 		<option selected="selected">- Estados -</option>
 		<option>No iniciada</option>
                 <option>En curso</option>
 		<option>Completada</option>
-	</select>
-        </div>
-        <br>
-        <div class="form-element">
-            Inicio <input type="date" id="fecha_inicio" name="inicio_tarea"/> 
-            <input type="time" name="hora_inicio"/>
+                </select>
+            </div>
+            <br>
+            <div class="form-label-group">
+            Inicio <input type="date" class="form-control" id="fecha_inicio" name="inicio_tarea"/> 
+            <input type="time" class="form-control" name="hora_inicio"/>
             <br><br>
-            Fin <input type="date" id="fecha_fin" name="fin_tarea"/> 
-            <input type="time" name="hora_fin"/>
-        </div>
-        <br>
-        <br>
-        <div class="form-element">
+            Fin <input type="date" class="form-control" id="fecha_fin" name="fin_tarea"/> 
+            <input type="time" class="form-control" name="hora_fin"/>
+            </div>
+            <br>
+            <br>
+            <div class="form-label-group">
             Descripcion
             <br>
-            <textarea id="descripcion" name="descripcion" rows="5" cols="60"></textarea>
+            <textarea id="descripcion" class="form-control" name="descripcion" rows="5" cols="60"></textarea>
+            </div>
+            <br>
+            <br>
+            <button class="btn btn-primary text-center" type="submit" name="crearTarea" value="Registrar tarea">Registrar tarea</button>
+            <a class="btn btn-primary text-center" href="/tareas">Ver tareas</a>
+            </form>
         </div>
-        <input type="submit" name="crearTarea" value="Registrar tarea">
-    </form>
+    </div>   
 </div>
 
 

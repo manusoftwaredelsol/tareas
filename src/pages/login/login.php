@@ -41,15 +41,7 @@ if (isset($_POST['login'])) {
 }
 ?>
 
-<html>
 
-    <head>
-        <meta charset="UTF-8">
-        <title>title</title>
-
-    </head>
-
-    <body>
         <div class="container">
             <div class="row">
                 <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
@@ -79,7 +71,5 @@ if (isset($_POST['login'])) {
                 </div>
             </div>
         </div>
-    </body>
 
-</html>
 

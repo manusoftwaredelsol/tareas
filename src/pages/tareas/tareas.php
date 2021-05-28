@@ -82,5 +82,5 @@ $query->execute();
 </div>
 </div>
     <br/>
-    <a href="/userpage"> Volver a la página de usuario </a>
+    <a class="btn btn-primary text-center" href="/userpage"> Volver a la página de usuario </a>
 </div>
